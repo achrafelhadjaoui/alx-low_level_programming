@@ -1,12 +1,10 @@
 #include "main.h"
 /**
- * Function pirnt_alphabet - which print the alphabet
- * in lower case.
- *
- * Return: no return
- */
-
-/* this the prototype of print_alphabet function */
+* my_function - does my stuff
+* @my_arg: its mine damnit
+*
+* Does my stuff explained.
+*/
 void print_alphabet(void)
 {
 	char i;
