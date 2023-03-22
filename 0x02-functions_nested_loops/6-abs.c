@@ -2,7 +2,7 @@
 /**
  * _abs - a function that compute the absolute
  * value of an integer.
- * @int: the function take argument from type int
+ * @j: the function take argument from type int
  *
  * Return: the function return the absolute value of the argument.
  */
