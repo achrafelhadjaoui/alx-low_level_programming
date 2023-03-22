@@ -1,10 +1,9 @@
 #include "main.h"
 /**
-* my_function - does my stuff
-* @my_arg: its mine damnit
-*
-* Does my stuff explained.
-*/
+ *print_alphabet-is a function
+ *that print the alphabet in
+ *lower case following by a new line
+ */
 void print_alphabet(void)
 {
 	char i;
