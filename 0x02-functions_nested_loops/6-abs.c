@@ -6,11 +6,9 @@
  *
  * Return: the function return the absolute value of the argument.
  */
-int _abs(int)
+int _abs(int j)
 {
-	int j;
 
-	j = _abs(int);
 	if (j < 0)
 	{
 		j = j * -1;
