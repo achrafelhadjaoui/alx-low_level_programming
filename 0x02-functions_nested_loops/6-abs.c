@@ -10,7 +10,7 @@ int _abs(int)
 {
 	int j;
 
-	j = _abs();
+	j = _abs(int);
 	if (j < 0)
 	{
 		j = j * -1;
