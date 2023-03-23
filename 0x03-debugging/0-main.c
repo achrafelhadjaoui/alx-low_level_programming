@@ -1,13 +1,17 @@
 #include "main.h"
+
 /**
- * test_func - a function that test a function
- * @k: the only parameter in form of int
+ * main - test the function positive_or_negative
  *
- * Return: 1 if the function correct
+ * Return: 0 if success
  */
-int test_func(int k)
+
+int main(void)
 {
-	k = positive_or_negative(i);
-	if (i == 0 && k == 0)
-		return (1);
+	int i;
+
+	i = 0;
+	positve_or_negative(i);
+
+	return (0);
 }
