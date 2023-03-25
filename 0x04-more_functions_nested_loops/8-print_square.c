@@ -14,7 +14,7 @@ void print_square(int size)
 	while (num < size)
 	{
 		dist = 0;
-		while (dist <= size)
+		while (dist < size)
 		{
 			_putchar('#');
 			dist++;
