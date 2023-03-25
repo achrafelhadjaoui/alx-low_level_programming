@@ -8,6 +8,7 @@
 void print_diagonal(int n)
 {
 	int num;
+	int dist;
 
 	num = 0;
 	while (num < n)
@@ -15,7 +16,7 @@ void print_diagonal(int n)
 		dist = 0;
 		while (dist <= num)
 		{
-			if (dist == n - 1)
+			if (dist == num)
 				_putchar('\\');
 			else
 				_putchar(' ');
