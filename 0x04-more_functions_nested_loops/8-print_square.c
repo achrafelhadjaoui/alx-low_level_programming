@@ -16,10 +16,12 @@ void print_square(int size)
 		dist = 0;
 		while (dist <= size)
 		{
-			_putchar('\\');
+			_putchar('#');
 			dist++;
 		}
 		_putchar('\n');
 		num++;
 	}
+	if (size <= 0)
+		_putchar('\n');
 }
