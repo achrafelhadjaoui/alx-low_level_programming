@@ -10,7 +10,7 @@ void print_line(int n)
 	int num;
 
 	num = 0;
-	while (num <= n)
+	while (num < n)
 	{
 		_putchar('_');
 		num++;
