@@ -12,8 +12,8 @@ void print_diagonal(int n)
 	num = 0;
 	while (num < n)
 	{
-		dist = num;
-		while (dist < n)
+		dist = 0;
+		while (dist <= num)
 		{
 			if (dist == n - 1)
 				_putchar('\\');
