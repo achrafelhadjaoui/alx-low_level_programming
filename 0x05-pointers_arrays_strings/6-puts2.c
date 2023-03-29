@@ -14,7 +14,7 @@ void puts2(char *str)
 	i = 0;
 	while (str[j] != '\0')
 	{
-		j++
+		j++;
 	}
 	while (i < j)
 	{
