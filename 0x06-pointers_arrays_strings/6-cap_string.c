@@ -1,32 +1,6 @@
 #include "main.h"
 
 /**
- * _to_lower - a healper function that convert every
- * to lowercase
- * @s: the parameter
- *
- * Return: s
- */
-
-char *_to_lower(char *s)
-{
-	int j;
-
-	j = 0;
-	while (s[j] != '\0')
-	{
-		if (s[j] >= 65 && s[j] <= 90)
-		{
-			s[j] = s[j] + 32;
-			j++;
-		}
-		else
-			j++;
-	}
-	return (s);
-}
-
-/**
  * cap_string - a function that capitalizes
  * all words of a string
  * @str: the parameter
@@ -39,7 +13,7 @@ char *cap_string(char *str)
 	int i;
 	char *p;
 
-	p = _to_lower(str);
+	p = str;
 	i = 0;
 	if (p[i] >= 97 && p[i] <= 122)
 		p[i] = p[i] - 32;
