@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <unistd.h>
 
 /**
  * main - is the function
@@ -8,6 +8,6 @@
 
 int main(void)
 {
-	puts("and that piece of art is useful\" - Dora korpar, 2015-10-19");
+	write(1, "and that piece of art is useful\" - Dora korpar, 2015-10-19\n", 58);
 	return (1);
 }
