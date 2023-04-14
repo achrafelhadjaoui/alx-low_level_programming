@@ -9,18 +9,22 @@
 
 int main(void)
 {
-	char i;
-	char j;
+	int i;
+	int j;
+	int k;
+	int d;
 
-	i = '0';
-	while (i <= '8')
+	i = 0;
+	while (i <= 8)
 	{
 		j = i + 1;
-		while (j <= '9')
+		while (j <= 9)
 		{
-			putchar(i);
-			putchar(j);
-			if (i != '8')
+			d = i + 48;
+			k = j + 48;
+			putchar(d);
+			putchar(k);
+			if (i != 8)
 			{
 				putchar(',');
 				putchar(' ');
