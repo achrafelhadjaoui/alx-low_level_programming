@@ -3,7 +3,7 @@
 
 /**
  * malloc_checked - a function that allocates memory using malloc
- * @b: number of elements
+ * @b: size of allocated memory
  *
  * Return: a pointer to the allocated memory
  * if malloc fails, the malloc_checked function should cause normal
@@ -14,7 +14,7 @@ void *malloc_checked(unsigned int b)
 {
 	unsigned int *ptr;
 
-	ptr = malloc(b * sizeof(unsigned int));
+	ptr = malloc(b);
 	if (ptr == NULL)
 		exit(98);
 	return (ptr);
