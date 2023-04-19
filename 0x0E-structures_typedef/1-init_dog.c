@@ -3,8 +3,6 @@
 
 /**
  * init_dog - a function that initialize a variable
- * dog - name of the structure
- * @dog: first element
  * @name: second element
  * @age: third element
  * @owner: forth element
@@ -13,6 +11,8 @@
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
+
+	/*@dog: name of the structure*/
 	d = malloc(sizeof(struct dog));
 	d->name = name;
 	d->age = age;
