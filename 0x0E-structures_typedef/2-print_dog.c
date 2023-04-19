@@ -4,11 +4,12 @@
 
 /**
  * print_dog - a function that ptint a struct dog
- * @dog: the only element
+ * @d: the only element
  */
 
 void print_dog(struct dog *d)
 {
+	/* @dog: name of struct */
 	if (d == NULL)
 		d = malloc(sizeof(struct dog));
 	printf("NAME: %s\n", d->name);
