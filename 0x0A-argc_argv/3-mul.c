@@ -20,7 +20,10 @@ int main(int argc, char **argv)
 		return (1);
 	}
 	else if (argc < 3)
+	{
 		printf("%d\n", _toint(argv[1]));
+		return (1);
+	}
 	else
 	{
 		printf("%d\n", _toint(argv[1]) * _toint(argv[2]));
