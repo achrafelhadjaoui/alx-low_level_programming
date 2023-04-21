@@ -14,11 +14,13 @@ int _toint(char *n);
 
 int main(int argc, char **argv)
 {
-	if (argc < 3)
+	if (argc < 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
+	else if (argc < 3)
+		printf("%s\n", argv[1]);
 	else
 	{
 		printf("%d\n", _toint(argv[1]) * _toint(argv[2]));
