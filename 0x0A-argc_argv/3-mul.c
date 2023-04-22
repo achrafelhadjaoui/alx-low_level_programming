@@ -14,7 +14,7 @@ int _toint(char *n);
 
 int main(int argc, char **argv)
 {
-	if (argc < 3 || argc > 3)
+	if (argc < 3)
 	{
 		printf("Error\n");
 		return (1);
@@ -37,13 +37,18 @@ int _toint(char *n)
 {
 	int i;
 	int res;
+	int sign;
 
+	sign = 1;
 	i = 0;
 	res = 0;
 	while (n[i] != '\0')
 	{
-		res = (res * 10) + (n[i] - 48);
+		if (n[i] == '-')
+			sign = sign * -1;
+		else
+			res = (res * 10) + (n[i] - 48);
 		i++;
 	}
-	return (res);
+	return (res * sign);
 }
