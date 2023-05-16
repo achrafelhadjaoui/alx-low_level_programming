@@ -19,9 +19,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	FILE *ptr;
 	char c;
 	size_t count;
-	size_t check;
 
-	check = 0;
 	count = 0;
 	ptr = fopen(filename, "r");
 	if (ptr == NULL)
@@ -30,10 +28,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		printf("%c", c);
 		count++;
-		check++;
 	}
 	fclose(ptr);
-	if (check != count)
+	if (count != letters)
 		return (0);
 	return (count);
 }
