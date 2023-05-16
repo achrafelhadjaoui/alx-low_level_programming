@@ -19,16 +19,21 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	FILE *ptr;
 	char c;
 	size_t count;
+	size_t check;
 
+	check = 0;
 	count = 0;
 	ptr = fopen(filename, "r");
 	if (ptr == NULL)
 		return (0);
-	while ((c = fgetc(ptr)) != EOF && count <= letters)
+	while ((c = fgetc(ptr)) != EOF && count < letters)
 	{
 		printf("%c", c);
 		count++;
+		check++;
 	}
 	fclose(ptr);
+	if (check != count)
+		return (0);
 	return (count);
 }
