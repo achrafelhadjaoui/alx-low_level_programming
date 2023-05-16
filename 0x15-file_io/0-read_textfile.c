@@ -28,8 +28,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		printf("%c", c);
 		letters++;
 	}
-	if (c != EOF)
-		return (0);
 	fclose(ptr);
-	return (letters);
+	if (c == EOF)
+		return (letters);
+	else
+		return (0);
 }
