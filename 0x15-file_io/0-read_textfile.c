@@ -20,7 +20,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char c;
 	size_t count;
 
-	count = 0
+	count = 0;
 	ptr = fopen(filename, "r");
 	if (ptr == NULL)
 		return (0);
