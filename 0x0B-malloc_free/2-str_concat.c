@@ -15,26 +15,19 @@ int _len(char *c);
 char *str_concat(char *s1, char *s2)
 {
 	char *ptr;
-	char *try;
 	int count;
 
-	try = concat(s1, s2);
-	printf("%s\n", try);
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	count = _len(s1) + _len(s2);
-	printf("%d\n", count);
-	ptr = malloc(sizeof(char) * count);
+	ptr = malloc(sizeof(char) * count + 2);
 	if (ptr == NULL)
 		return (NULL);
 	ptr = concat(s1, s2);
 	return (ptr);
 }
-
-/**
- * _len - a function that counts the length of a string
- * @str: the address that holds the string
- *
- * Return: the length of the string
- */
 
 
 /**
@@ -57,7 +50,7 @@ int _len(char *c)
 }
 
 /**
- * _concat - a function that concatonate two strings
+ * concat - a function that concatonate two strings
  * @src: the first string
  * @dest: the seconde string
  *
@@ -66,14 +59,15 @@ int _len(char *c)
 
 char *concat(char *src, char *dest)
 {
-	int length;
+	int length, i;
 
+	i = 0;
 	length = _len(dest);
-	while (*src != '\0')
+	while (src[i] != '\0')
 	{
-		dest[length] = *src;
+		dest[length] = src[i];
 		length++;
-		src++;
+		i++;
 	}
 	dest[length] = '\0';
 	return (dest);
