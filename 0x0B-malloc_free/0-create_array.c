@@ -20,7 +20,7 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 	while (*ptr != '\0')
 	{
-		optr = c;
+		*ptr = c;
 		ptr++;
 	}
 	return (ptr);
