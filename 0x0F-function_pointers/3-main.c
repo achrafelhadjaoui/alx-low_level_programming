@@ -24,13 +24,13 @@ int main(int argc, char *argv[])
 	operator = *argv[2];
 
 	/* cheek if a second char is exist or cheek if it is NULL */
-	if (operator == '\0' || argv[2][1])
+	if (argv[2] == NULL || argv[2][1])
 	{
 		printf("Error\n");
 		exit(99);
 	}
 
-	calc = (*get_op_func(argv[2]))(num1, num2);
+	calc = (*get_op_func(&operator))(num1, num2);
 	printf("%d\n", calc);
 	return (0);
 }
