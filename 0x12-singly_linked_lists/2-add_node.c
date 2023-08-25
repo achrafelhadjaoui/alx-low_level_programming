@@ -10,11 +10,37 @@
 
 list_t *add_node(list_t **head, const char *str)
 {
-	head = malloc(sizeof(list_t));
-	if (head == NULL)
+	list_t *temp;
+
+	temp = malloc(sizeof(list_t));
+	if (temp == NULL)
 	{
-		free(*head);
 		return (NULL);
 	}
-	head = 
+
+	temp->str = strdup(str);
+	temp->len = _strlen(temp->str);
+	temp->next = *head;
+
+	*head = temp;
+
+	return (temp);	
+}
+
+
+/**
+ * _strlen - a function
+ * @str: parameter
+ *
+ * Return: the length
+ */
+
+unsigned int _strlen(char *str)
+{
+	unsigned int i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }
