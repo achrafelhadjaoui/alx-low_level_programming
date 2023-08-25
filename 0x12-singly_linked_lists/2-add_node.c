@@ -21,7 +21,7 @@ list_t *add_node(list_t **head, const char *str)
 	}
 
 	temp->str = strdup(str);
-	temp->len = _strlen(temp->str);
+	temp->len = _strlen(str);
 	temp->next = *head;
 
 	*head = temp;
@@ -36,7 +36,7 @@ list_t *add_node(list_t **head, const char *str)
  * Return: the length
  */
 
-unsigned int _strlen(char *str)
+unsigned int _strlen(const char *str)
 {
 	unsigned int i;
 
