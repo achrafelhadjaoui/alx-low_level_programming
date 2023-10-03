@@ -35,10 +35,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	check_write = write(STDOUT_FILENO, buff, letters);
-	if ((size_t)check_write != letters)
-	{
-		return (0);
-	}
 
 	close(check_open);
 
