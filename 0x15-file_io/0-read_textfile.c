@@ -14,7 +14,8 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int check = 0;
-	ssize_t check_read, i = 0;
+	ssize_t check_read;
+	size_t i = 0;
 	char buf[100];
 
 	if (filename == NULL)
@@ -25,13 +26,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	check_read = read(check, buf, letters);
-	if (check_read < 0 || (size_t)check_read != letters)
+	if (check_read == -1)
 	{
 		close(check);
 		return (0);
 	}
 
-	while (buf[i])
+	while (i < letters)
 	{
 		write(1, &buf[i], 1);
 		i++;
