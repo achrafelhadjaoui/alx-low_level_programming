@@ -16,7 +16,7 @@ int main(int ac, char *av[])
 
 	if (ac != 3)
 	{
-		dprintf(STDOUT_FILENO, "Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
@@ -38,14 +38,12 @@ int main(int ac, char *av[])
 		exit(99);
 	}
 
-	check_close = close(file_from);
-	if (check_close == -1)
+	if (close(file_from) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
 		exit(100);
 	}
-	check_close = close(file_to);
-	if (check_close == -1)
+	if (close(file_to) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to);
 		exit(100);
