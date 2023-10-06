@@ -50,6 +50,7 @@ int main(int ac, char *av[])
 	while ((check_read = read(file_from, buff, 1024)) > 0)
 	{
 		check_write = write(file_to, buff, check_read);
+		check_error(0, check_write, av[2]);
 	}
 	check_error(check_read, 0, av[1]);
 
