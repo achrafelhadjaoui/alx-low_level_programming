@@ -10,7 +10,7 @@
 
 int main(int ac, char *av[])
 {
-	int file_from, file_to, check_close;
+	int file_from, file_to;
 	ssize_t check_read, check_write;
 	char buff[1024];
 
