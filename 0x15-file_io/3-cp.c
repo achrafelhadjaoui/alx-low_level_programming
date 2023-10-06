@@ -20,7 +20,7 @@ int main(int ac, char *av[])
 		exit(97);
 	}
 
-	file_from = open(av[1], O_RDONLY | O_CREAT, 00664);
+	file_from = open(av[1], O_RDONLY, 00664);
 	check_read = read(file_from, buff, 1024);
 
 	if (file_from == -1 || check_read == -1)
