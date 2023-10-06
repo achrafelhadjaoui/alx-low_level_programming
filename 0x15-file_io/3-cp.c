@@ -10,7 +10,7 @@
 
 int main(int ac, char *av[])
 {
-	int file_from, file_to;
+	int file_from, file_to, check_close;
 	ssize_t check_read, check_write;
 	char buff[1024];
 
@@ -38,12 +38,14 @@ int main(int ac, char *av[])
 		exit(99);
 	}
 
-	if (close(file_from) == -1)
+	check_close = close(file_from);
+	if (check_close == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
 		exit(100);
 	}
-	if (close(file_to) == -1)
+	check_close = close(file_to);
+	if (check_close == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to);
 		exit(100);
