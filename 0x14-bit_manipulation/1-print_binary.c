@@ -18,7 +18,7 @@ void print_binary(unsigned long int n)
 
 		if (val & 1)
 		{
-			_putcahr('1');
+			_putchar('1');
 			j++;
 		}
 
@@ -26,7 +26,7 @@ void print_binary(unsigned long int n)
 			_putchar('0');
 	}
 	if (!val)
-		_putcahr('0');
+		_putchar('0');
 
 
 }
