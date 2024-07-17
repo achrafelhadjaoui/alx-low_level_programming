@@ -16,37 +16,37 @@ int binary_search(int *array, size_t size, int value)
 	size_t start, end, mid;
 
 	start = 0;
-	end = size;
+	end = size - 1;
 
 	if (!array)
 		return (-1);
 
-	while (start < end)
+	while (start <= end)
 	{
 		size_t i = start;
 
 		printf("Searching in array: ");
-		while (i < end)
+		while (i <= end)
 		{
-			printf("%d, ", array[i]);
+			if (i == end)
+			{
+				printf("%d", array[i]);
+			}
+			else
+				printf("%d, ", array[i]);
 			i++;
 		}
 		printf("\n");
 		mid = (start + end) / 2;
 
 		if (array[mid] < value)
-		{
 			start = mid + 1;
-		}
 		else if (array[mid] > value)
-		{
 			end = mid - 1;
-		}
 		else if (array[mid] == value)
 			return (mid);
 		else if (start == end)
 			return (-1);
 	}
 	return (-1);
-
 }
